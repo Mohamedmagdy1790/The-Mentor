@@ -1,9 +1,10 @@
+
 # THE MENTOR
 
 This project involves designing a Mentoring Management System, which aims
 to connect mentors and mentees for professional guidance and skill development.
 The system comprises a set of relational database tables and relationships to 
-store **information** about countries, skills, job titles, mentoring requests, mentoring
+store information about countries, skills, job titles, mentoring requests, mentoring
 offers, mentors, mentees, and related entities.
 
 ## Features
@@ -72,4 +73,6 @@ offers, mentors, mentees, and related entities.
   ]
 }
 ```
+
+
 
