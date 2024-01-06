@@ -73,6 +73,36 @@ offers, mentors, mentees, and related entities.
   ]
 }
 ```
+#### Get mentor
 
+```http
+  GET /api/mentor/{mentorName}
+```
+
+| Parameter    | Type     | Description                                |
+|:-------------| :------- |:-------------------------------------------|
+| `mentorName` | `string` | **Required**. The first name of the mentor |
+
+#### Response
+``` json
+{
+  {
+"id": 3,
+"firstName": "Ramy",
+"lastName": "Raghab",
+"birthDate": "1979-02-01T00:00:00.000+00:00",
+"email": "ramy.raghab@gmail.com",
+"phone": "01001001001",
+"linkedinURL": "linkedin-Ramy",
+"hourlyPrice": "100",
+"lookupCountry": {
+"id": 1,
+"countryName": "Egypt"
+},
+"workExperienceList": []
+}
+  ]
+}
+```
 
 

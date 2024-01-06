@@ -21,7 +21,7 @@ public class MentorController {
 
     @GetMapping("/{name}")
     Mentor getmentor(@PathVariable String name){
-       return mentorService.displayMentorBirthdateInUTC(name);
+       return mentorService.getMentorByFirstName(name);
     }
 
     @GetMapping("/mentors/{name}")

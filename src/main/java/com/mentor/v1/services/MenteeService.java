@@ -21,8 +21,6 @@ public class MenteeService {
     }
 
 
-
-
     public Mentee displayMentorBirthdateInUTC(String name) {
         Mentee fetchMentee= menteeRepository.findMenteeByFirstName(name) ;
         System.out.println("Timestamp epoch milliseconds after fetching: "

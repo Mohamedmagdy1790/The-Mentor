@@ -1,20 +1,15 @@
 package com.mentor.v1.services;
 
-
-
-
-        import java.sql.Timestamp;
-        import java.time.ZoneId;
-        import java.time.ZonedDateTime;
-        import java.util.List;
-        import java.util.TimeZone;
-
-        import com.mentor.v1.entities.Mentor;
-        import com.mentor.v1.repositories.MentorRepository;
-        import org.springframework.stereotype.Service;
+    import java.sql.Timestamp;
+    import java.time.ZoneId;
+    import java.time.ZonedDateTime;
+    import java.util.List;
+    import java.util.TimeZone;
+    import com.mentor.v1.entities.Mentor;
+    import com.mentor.v1.repositories.MentorRepository;
+    import org.springframework.stereotype.Service;
 
 @Service
-
 public class MentorService {
 
     private final MentorRepository mentorRepository;
@@ -40,11 +35,8 @@ public class MentorService {
         mentorRepository.save(mentor);
     }
 
-    public Mentor displayMentorBirthdateInUTC(String name) {
-        Mentor fetchMentor= mentorRepository.findByFirstName(name);
-        System.out.println("Timestamp epoch milliseconds after fetching: "
-                + fetchMentor.getBirthDate().getTime());
-        return fetchMentor;
+    public Mentor getMentorByFirstName(String name) {
+        return mentorRepository.findMentorByFirstName(name);
     }
 
     public List<Mentor> getMentorsByJopTilte(String name) {

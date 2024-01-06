@@ -10,13 +10,13 @@ import java.util.List;
 
 @Repository
 public interface MentorRepository extends JpaRepository<Mentor, Integer> {
-    @Transactional(readOnly=true)
-    public Mentor findByFirstName(String name);
+
+     Mentor findMentorByFirstName(String name);
 
     @Query(value = "SELECT m FROM Mentor m " +
             "JOIN WorkExperience w ON m.id=w.mentor.id " +
             "JOIN LookupJobTitle ljt on  w.lookupJobTitle.id= ljt.id WHERE ljt.jobTitle = :name")
-   public List<Mentor> getMentors(String name);
+      List<Mentor> getMentors(String name);
 
 }
 
